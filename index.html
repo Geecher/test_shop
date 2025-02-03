@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин одежды</title>
+    <link rel="stylesheet" href="https://unpkg.com/reset-css@5.0.2/reset.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="tel">
+            <a href="tel:+79253431696">+7 925 343 16 96</a>
+            <p>Перезвоните мне</p>
+          </div>
+          <a href="/" id="logo"
+            ><span>FAMFACTORY</span>
+            <p>Швейная фабрика</p></a
+          >
+          <div class="mail">
+            <a href="mailto:mail@famfactory.ru">MAIL@FAMFACTORY.RU</a>
+            <p>Наша почта</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <h1 class="hero-inner__title">Сделано <br />в Санкт-Петербурге</h1>
+            <button
+              class="hero-inner__btn btn"
+              type="button"
+              onclick="window['some-modal-id'].showModal()"
+              aria-controls="some-modal-id"
+            >
+              Отправить запрос
+            </button>
+            <dialog
+              class="dialog"
+              id="some-modal-id"
+              aria-labelledby="dialog-name"
+            >
+              <h2 class="dialog__title" id="dialog-name">Я модальное окно</h2>
+              <p>
+                Весь остальной контент на странице недоступен, когда я открыто.
+              </p>
+              <button
+                class="dialog__button button-orange"
+                type="button"
+                onclick="window['some-modal-id'].close()"
+              >
+                Закрыть с помощью JavaScript
+              </button>
+              <form method="dialog">
+                <button class="dialog__button button-orange">
+                  Ясно-понятно 👍
+                </button>
+              </form>
+            </dialog>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="products-inner">
+            <h2 class="products__title title">
+              Современный <br />мерчендайз для бизнеса
+            </h2>
+            <p class="products__desc desc">
+              Над реализацией проектов по разработке и производству одеждыи
+              аксессураов трудится огромная команда профессионалов, поэтому мы
+              можем создавать проекты любой сложности и масштабов под ключ или
+              воплотить конкретные задачи на любом из этапов производства.
+            </p>
+            <div class="products-list">
+              <a href="#" class="products-list__item">
+                <img
+                  class="products-list__item-img"
+                  src="./src/img/products/1.jpg"
+                  alt=""
+                />
+                <h4 class="products-list__item-title">
+                  Худи<sup>от 1650 ₽</sup>
+                </h4>
+              </a>
+              <a href="#" class="products-list__item">
+                <img
+                  class="products-list__item-img"
+                  src="./src/img/products/2.jpg"
+                  alt=""
+                />
+                <h4 class="products-list__item-title">
+                  Футболки<sup>от 510 ₽</sup>
+                </h4>
+              </a>
+              <a href="#" class="products-list__item">
+                <img
+                  class="products-list__item-img"
+                  src="./src/img/products/3.jpg"
+                  alt=""
+                />
+                <h4 class="products-list__item-title">
+                  Свитшоты<sup>от 890 ₽</sup>
+                </h4>
+              </a>
+              <a href="#" class="products-list__item">
+                <img
+                  class="products-list__item-img"
+                  src="./src/img/products/4.jpg"
+                  alt=""
+                />
+                <h4 class="products-list__item-title">
+                  Штаны<sup>от 1230 ₽</sup>
+                </h4>
+              </a>
+              <a href="#" class="products-list__item">
+                <img
+                  class="products-list__item-img"
+                  src="./src/img/products/5.jpg"
+                  alt=""
+                />
+                <h4 class="products-list__item-title">
+                  Шопперы<sup>от 330 ₽</sup>
+                </h4>
+              </a>
+              <a href="#" class="products-list__item">
+                <img
+                  class="products-list__item-img"
+                  src="./src/img/products/6.jpg"
+                  alt=""
+                />
+                <h4 class="products-list__item-title">
+                  Кепки<sup>от 400 ₽</sup>
+                </h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <div class="about-inner">
+            <div class="about-video">
+              <div class="about-video__title">
+                Презентация нашей коллекции одежды 2021
+              </div>
+              <a class="about-video__btn" href="">Play btn</a>
+            </div>
+            <h2 class="about__title title">
+              Производство одежды для компаний, брендов, артистов
+            </h2>
+            <p class="about__desc desc">
+              Наша команда по разработке и производству одежды может реализовать
+              проекты любой сложности, независимо от их масштаба. Мы можем взять
+              на себя всю работу под ключ, или решить конкретные задачи на любом
+              из этапов производства.
+            </p>
+            <div class="about-benefits">
+              <div class="about-benefits__item">
+                <img class="about-benefits__item-img" src="" alt="" />
+                <h4 class="about-benefits__item-title">
+                  Разработка лекал и дизайна
+                </h4>
+                <p class="about-benefits__item-desc">
+                  Поможем создать уникальные лекала для вашей одежды или
+                  адаптировать уже имеющиеся. Разработаем индивидуальный дизайн
+                  ваших товаров
+                </p>
+              </div>
+              <div class="about-benefits__item">
+                <img class="about-benefits__item-img" src="" alt="" />
+                <h4 class="about-benefits__item-title">
+                  Пошив одежды на заказ
+                </h4>
+                <p class="about-benefits__item-desc">
+                  Пошив трикотажных изделий любой сложности и в любых объемах,
+                  как по вашим образцам, так и по нашим базовым лекалам
+                </p>
+              </div>
+              <div class="about-benefits__item">
+                <img class="about-benefits__item-img" src="" alt="" />
+                <h4 class="about-benefits__item-title">
+                  Бренд одежды под ключ
+                </h4>
+                <p class="about-benefits__item-desc">
+                  Поможем разработать линейку одежды для вашего бренда, от
+                  пошива до реализации.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="print">
+        <div class="container">
+          <div class="print-inner">
+            <h2 class="print__title title">
+              Способы нанесения принтов и вышивка
+            </h2>
+            <div class="print-methods">
+              <div class="print-methods__item">
+                <img class="print-methods__item-img" src="" alt="" />
+                <h4 class="print-methods__item-title">Шелкография</h4>
+                <p class="print-methods__item-desc">
+                  Трафаретная печать подходит для нанесения почти на любых
+                  изделиях: футболках, толстовках, свитшотах и т.д. Принты,
+                  сделанные данным способом имеют высокую износостойкость, не
+                  требуют особого ухода и прослужат довольно долго.
+                </p>
+              </div>
+              <div class="print-methods__item">
+                <img class="print-methods__item-img" src="" alt="" />
+                <h4 class="print-methods__item-title">Вышивка на одежде</h4>
+                <p class="print-methods__item-desc">
+                  Один из самых интересных способов нанесения изображения на
+                  одежду. Вышивка долговечна, без проблем переносит механические
+                  воздействия. Данный вид нанесения выглядит наиболее эффектно и
+                  прослужит дольше всего.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="schema">
+        <div class="container">
+          <div class="schema-inner"></div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./src/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "RF Dewi";
+  src: local("RF Dewi Expanded Ultrabold"), local("RF-Dewi-Expanded-Ultrabold"),
+    url("../fonts/rf-dewi/RFDewiExpanded-Ultrabold.woff2") format("woff2"),
+    url("../fonts/rf-dewi/RFDewiExpanded-Ultrabold.woff") format("woff"),
+    url("../fonts/rf-dewi/RFDewiExpanded-Ultrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --main-font: "RF Dewi", serif;
+  --inter: "Inter", serif;
+}
+
+/* .display-1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.display-5 {
+  font-size: 2.5rem;
+  line-height: 150%;
+  font-weight: 900;
+}
+
+.h5 {
+  font-size: 1.5rem;
+  line-height: 135%;
+  font-weight: 900;
+}
+
+:root, body {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 576px) {
+  :root, body {
+      font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root, body {
+      font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  :root, body {
+      font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root, body {
+      font-size: 16px;
+  }
+} */
+
+html,
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  color: #191919;
+  scrollbar-gutter: stable;
+}
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+button {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 120%;
+  cursor: pointer;
+  color: #353535;
+  padding: 22px 35px;
+  background: #f4df74;
+  border-radius: 10px;
+  border: none;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #e6d160;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+dialog {
+  pointer-events: none;
+  display: block;
+  opacity: 0;
+  transition: all 0.5s;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+dialog[open] {
+  opacity: 1;
+  pointer-events: all;
+}
+.desc {
+  font-family: var(--inter);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  font-style: normal;
+  text-align: center;
+}
+
+.container {
+  max-width: 1104px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  text-align: center;
+}
+#logo p {
+  margin: 5px 0 0;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+}
+
+/*----- Hero section -----*/
+.hero {
+  padding: 214px 0;
+  position: relative;
+  overflow: auto;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../img/hero-bg.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  filter: brightness(30%);
+}
+
+.hero-inner {
+  display: grid;
+  place-items: center;
+}
+.hero-inner__title {
+  font-family: var(--main-font);
+  text-align: center;
+  font-size: 60px;
+  color: #fff;
+  margin: 0 0 30px;
+}
+
+/*----- Products section -----*/
+.products {
+  padding: 100px 0;
+}
+
+.products-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products__title {
+  margin: 0 0 2.5rem;
+}
+
+.products__desc {
+  max-width: 740px;
+  margin: 0 0 4.5rem;
+}
+
+.products-list {
+  display: grid;
+  gap: 35px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-self: normal;
+}
+.products-list__item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.products-list__item-img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 0 0 1rem;
+}
+
+/*----- About section -----*/
+.about {
+  padding: 100px 0;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__desc {
+  max-width: 738px;
+}
+
+.about-benefits {
+  display: grid;
+  gap: 35px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
