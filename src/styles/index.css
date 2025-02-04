@@ -14,55 +14,42 @@
   --inter: "Inter", serif;
 }
 
-/* .display-1 {
-  font-size: 5rem;
-  font-weight: 900;
-}
-
-.display-5 {
-  font-size: 2.5rem;
-  line-height: 150%;
-  font-weight: 900;
-}
-
-.h5 {
-  font-size: 1.5rem;
-  line-height: 135%;
-  font-weight: 900;
-}
-
-:root, body {
+:root,
+body {
   font-size: 10px;
 }
 
 @media screen and (min-width: 576px) {
-  :root, body {
-      font-size: 12px;
+  :root,
+  body {
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  :root, body {
-      font-size: 12px;
+  :root,
+  body {
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  :root, body {
-      font-size: 14px;
+  :root,
+  body {
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  :root, body {
-      font-size: 16px;
+  :root,
+  body {
+    font-size: 16px;
   }
-} */
+}
 
 html,
 body {
   font-family: var(--main-font);
-  font-size: 16px;
   font-weight: 400;
   color: #191919;
   scrollbar-gutter: stable;
@@ -73,19 +60,25 @@ a {
 }
 button {
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 120%;
   cursor: pointer;
   color: #353535;
-  padding: 22px 35px;
+  padding: 1.3rem 2rem;
   background: #f4df74;
-  border-radius: 10px;
+  border-radius: 0.7rem;
   border: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 button:hover {
-  background: #e6d160;
+  background: #ffe241;
+  transform: scale(1.03);
+}
+sup {
+  vertical-align: super;
+  margin: 0.7rem;
+  font-size: 0.8rem;
 }
 
 body:has(dialog[open]) {
@@ -94,15 +87,27 @@ body:has(dialog[open]) {
 dialog {
   pointer-events: none;
   display: block;
+  visibility: hidden;
   opacity: 0;
   transition: all 0.5s;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
 }
 dialog[open] {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 110%;
+  text-align: center;
 }
 .desc {
   font-family: var(--inter);
@@ -123,25 +128,38 @@ dialog[open] {
   position: absolute;
   width: 100%;
   color: #fff;
+  z-index: 1;
 }
-.header-inner {
+.header .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  padding: 2rem 0;
+}
+.header .desc {
+  text-align: start;
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+.header a {
+  color: #fff;
+}
+.header a:hover {
+  color: #e6d160;
+}
+.tel,
+.mail {
+  font-size: 0.9rem;
 }
 
 #logo {
   text-align: center;
 }
-#logo p {
-  margin: 5px 0 0;
+#logo span {
+  font-size: 1.5rem;
 }
-
-.title {
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 110%;
-  text-align: center;
+#logo p {
+  text-transform: uppercase;
+  line-height: 150%;
 }
 
 /*----- Hero section -----*/
@@ -168,14 +186,23 @@ dialog[open] {
 .hero-inner__title {
   font-family: var(--main-font);
   text-align: center;
-  font-size: 60px;
+  font-size: 3.5rem;
   color: #fff;
   margin: 0 0 30px;
+}
+.hero-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+}
+.hero-modal__title {
+  font-size: 2rem;
 }
 
 /*----- Products section -----*/
 .products {
-  padding: 100px 0;
+  padding: 120px 0 280px;
 }
 
 .products-inner {
@@ -199,6 +226,10 @@ dialog[open] {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   align-self: normal;
 }
+.products-list__item {
+  color: #000;
+  font-weight: 400;
+}
 .products-list__item:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
@@ -211,21 +242,123 @@ dialog[open] {
 
 /*----- About section -----*/
 .about {
-  padding: 100px 0;
+  padding: 300px 0 130px;
+  background: #eee;
 }
-
 .about-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-
+.about-video {
+  padding: 80px 0 70px;
+  position: absolute;
+  top: -28rem;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  border-radius: 1rem;
+}
+.about-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../img/about/video.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  filter: brightness(30%);
+}
+.about-video__title {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 120%;
+  color: #fff;
+  margin-bottom: 2.3rem;
+}
+.about-video__btn:hover {
+  transform: scale(1.03);
+}
+.about__title {
+  margin-bottom: 2.5rem;
+}
 .about__desc {
   max-width: 738px;
+  margin-bottom: 4rem;
 }
-
 .about-benefits {
   display: grid;
   gap: 35px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.about-benefits__item-img {
+  margin: 0 0 2rem;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+.about-benefits__item-title {
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+/*----- Print section -----*/
+.print {
+  padding: 6rem 0;
+}
+.print__title {
+  margin: 0 0 5rem;
+}
+.print-methods {
+  display: grid;
+  gap: 35px;
+  grid-template-columns: repeat(auto-fill, minmax(534px, 1fr));
+}
+.print-methods__item-img {
+  width: 100%;
+  border-radius: 0.4rem;
+  margin: 0 0 2.5rem;
+}
+.print-methods__item-title {
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+/* адаптив */
+@media screen and (max-width: 1200px) {
+  .about-benefits {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .print-methods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header .header-inner {
+    justify-content: center;
+  }
+  .tel,
+  .mail {
+    display: none;
+  }
+
+  .about-benefits {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-video {
+    top: -42rem;
+  }
+
+  .print-methods {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .products-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

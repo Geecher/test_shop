@@ -9,8 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Швейная фабрика FAMFACTORY - производство одежды в Санкт-Петербурге"
+    />
+    <meta
+      name="keywords"
+      content="швейная фабрика, одежда, мерч, Санкт-Петербург"
     />
   </head>
   <body>
@@ -19,7 +27,7 @@
         <div class="header-inner">
           <div class="tel">
             <a href="tel:+79253431696">+7 925 343 16 96</a>
-            <p>Перезвоните мне</p>
+            <p class="desc">Перезвоните мне</p>
           </div>
           <a href="/" id="logo"
             ><span>FAMFACTORY</span>
@@ -27,7 +35,7 @@
           >
           <div class="mail">
             <a href="mailto:mail@famfactory.ru">MAIL@FAMFACTORY.RU</a>
-            <p>Наша почта</p>
+            <p class="desc">Наша почта</p>
           </div>
         </div>
       </div>
@@ -40,32 +48,28 @@
             <button
               class="hero-inner__btn btn"
               type="button"
-              onclick="window['some-modal-id'].showModal()"
+              onclick="window['hero-modal'].showModal()"
               aria-controls="some-modal-id"
             >
               Отправить запрос
             </button>
             <dialog
-              class="dialog"
-              id="some-modal-id"
+              class="hero-modal"
+              id="hero-modal"
               aria-labelledby="dialog-name"
             >
-              <h2 class="dialog__title" id="dialog-name">Я модальное окно</h2>
-              <p>
+              <h2 class="hero-modal__title" id="dialog-name">
+                Я модальное окно
+              </h2>
+              <p class="hero-modal__desc desc">
                 Весь остальной контент на странице недоступен, когда я открыто.
               </p>
               <button
-                class="dialog__button button-orange"
-                type="button"
-                onclick="window['some-modal-id'].close()"
+                class="hero-modal__button"
+                onclick="window['hero-modal'].close()"
               >
-                Закрыть с помощью JavaScript
+                Ясно-понятно 👍
               </button>
-              <form method="dialog">
-                <button class="dialog__button button-orange">
-                  Ясно-понятно 👍
-                </button>
-              </form>
             </dialog>
           </div>
         </div>
@@ -87,7 +91,7 @@
                 <img
                   class="products-list__item-img"
                   src="./src/img/products/1.jpg"
-                  alt=""
+                  alt="Худи из нашей коллекции"
                 />
                 <h4 class="products-list__item-title">
                   Худи<sup>от 1650 ₽</sup>
@@ -152,9 +156,32 @@
           <div class="about-inner">
             <div class="about-video">
               <div class="about-video__title">
-                Презентация нашей коллекции одежды 2021
+                Презентация нашей<br />
+                коллекции одежды 2021
               </div>
-              <a class="about-video__btn" href="">Play btn</a>
+              <a class="about-video__btn" href="">
+                <svg
+                  width="105"
+                  height="105"
+                  viewBox="0 0 105 105"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    opacity="0.2"
+                    cx="52.5"
+                    cy="52.5"
+                    r="52.5"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M69.3242 50.1972L44.9767 36.3269C44.2569 35.9395 43.3631 36.004 42.6881 36.004C39.988 36.004 40 37.8889 40 38.3664V66.7157C40 67.1195 39.9882 69.0783 42.6881 69.0783C43.3631 69.0783 44.2571 69.1426 44.9767 68.7552L69.3241 54.8851C69.428 54.8292 69.5256 54.7728 69.6172 54.716C71.1324 53.7775 71.1325 51.3046 69.6172 50.3662C69.5256 50.3095 69.4281 50.2531 69.3242 50.1972Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
             </div>
             <h2 class="about__title title">
               Производство одежды для компаний, брендов, артистов
@@ -167,32 +194,44 @@
             </p>
             <div class="about-benefits">
               <div class="about-benefits__item">
-                <img class="about-benefits__item-img" src="" alt="" />
+                <img
+                  class="about-benefits__item-img"
+                  src="./src/img/about/1.jpg"
+                  alt=""
+                />
                 <h4 class="about-benefits__item-title">
                   Разработка лекал и дизайна
                 </h4>
-                <p class="about-benefits__item-desc">
+                <p class="about-benefits__item-desc desc">
                   Поможем создать уникальные лекала для вашей одежды или
                   адаптировать уже имеющиеся. Разработаем индивидуальный дизайн
                   ваших товаров
                 </p>
               </div>
               <div class="about-benefits__item">
-                <img class="about-benefits__item-img" src="" alt="" />
+                <img
+                  class="about-benefits__item-img"
+                  src="./src/img/about/2.jpg"
+                  alt=""
+                />
                 <h4 class="about-benefits__item-title">
                   Пошив одежды на заказ
                 </h4>
-                <p class="about-benefits__item-desc">
+                <p class="about-benefits__item-desc desc">
                   Пошив трикотажных изделий любой сложности и в любых объемах,
                   как по вашим образцам, так и по нашим базовым лекалам
                 </p>
               </div>
               <div class="about-benefits__item">
-                <img class="about-benefits__item-img" src="" alt="" />
+                <img
+                  class="about-benefits__item-img"
+                  src="./src/img/about/3.jpg"
+                  alt=""
+                />
                 <h4 class="about-benefits__item-title">
                   Бренд одежды под ключ
                 </h4>
-                <p class="about-benefits__item-desc">
+                <p class="about-benefits__item-desc desc">
                   Поможем разработать линейку одежды для вашего бренда, от
                   пошива до реализации.
                 </p>
@@ -205,13 +244,17 @@
         <div class="container">
           <div class="print-inner">
             <h2 class="print__title title">
-              Способы нанесения принтов и вышивка
+              Способы нанесения <br />принтов и вышивка
             </h2>
             <div class="print-methods">
               <div class="print-methods__item">
-                <img class="print-methods__item-img" src="" alt="" />
+                <img
+                  class="print-methods__item-img"
+                  src="./src/img/prints/1.jpg"
+                  alt=""
+                />
                 <h4 class="print-methods__item-title">Шелкография</h4>
-                <p class="print-methods__item-desc">
+                <p class="print-methods__item-desc desc">
                   Трафаретная печать подходит для нанесения почти на любых
                   изделиях: футболках, толстовках, свитшотах и т.д. Принты,
                   сделанные данным способом имеют высокую износостойкость, не
@@ -219,9 +262,13 @@
                 </p>
               </div>
               <div class="print-methods__item">
-                <img class="print-methods__item-img" src="" alt="" />
+                <img
+                  class="print-methods__item-img"
+                  src="./src/img/prints/2.jpg"
+                  alt=""
+                />
                 <h4 class="print-methods__item-title">Вышивка на одежде</h4>
-                <p class="print-methods__item-desc">
+                <p class="print-methods__item-desc desc">
                   Один из самых интересных способов нанесения изображения на
                   одежду. Вышивка долговечна, без проблем переносит механические
                   воздействия. Данный вид нанесения выглядит наиболее эффектно и
@@ -230,11 +277,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="schema">
-        <div class="container">
-          <div class="schema-inner"></div>
         </div>
       </section>
     </main>
